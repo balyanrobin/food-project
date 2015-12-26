@@ -32,3 +32,24 @@
 .navbar-nav a:focus{
     outline: transparent;
 }
+
+.btn-color{
+    background: #424244;
+    color: #fff;
+}
+
+label{
+    font-weight: normal;
+}
+
+.modal-dialog {
+    position: relative;
+    top: 25%;
+}
+
+.logo-img {
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    width: 40px;
+}

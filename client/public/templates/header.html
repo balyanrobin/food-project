@@ -25,7 +25,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#" id="brandTitle"><img src="/assets/images/logo.jpg" alt="" style="width: 50px; height: 40px;"/></a>
+						<a class="navbar-brand" href="#" id="brandTitle"><img src="/assets/images/smiley.jpg" alt="" class="logo-img"/></a>
 					</div>
 					
 					<div class="collapse navbar-collapse"  id="navbar-collapse-main">
@@ -35,9 +35,9 @@
                             <li class=""><a  href="#/experiences">Experiences</a></li>
                             <li class=""><a  href="#/blog">Blog</a></li>
                             <li class=""><a  href="#/contact">Contact</a></li>
-                            <li class=""><a  href="" data-toggle="modal" data-target="#modalCallOne">
+                            <!--<li class=""><a  href="" data-toggle="modal" data-target="#modalCallOne">
                                 <span class="glyphicon glyphicon-user"></span> Sign up
-                            </a></li>
+                            </a></li>-->
                             <li class=""><a  href="" data-toggle="modal" data-target="#modalCallTwo">
                                 <span class="glyphicon glyphicon-log-in"></span> Login
                             </a></li>
@@ -58,12 +58,12 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-6">
+                                        <label>Don't have an account?</label>
+                                        <button type="button" class="btn btn-color btn-block" data-toggle="modal" data-target="#modalCallOne">Sign up</button>
                                         <div>
-                                            <label>Login with social accounts</label>
-                                            <br/>
-                                            <button type="button" class="btn btn-primary btn-lg btn-block">Facebook</button>
-                                            <br/>
-                                            <button type="button" class="btn btn-danger btn-lg btn-block">Google</button>
+                                            <label>Sign up with your social account</label><a href="/auth/facebook" class="btn btn-primary btn-block">
+                                            Facebook</a>
+                                            <button type="button" class="btn btn-danger btn-block">Google</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -83,11 +83,12 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" value="submit" class="btn btn-success btn-lg btn-block">login</button>
+                                                <button type="submit" value="submit" class="btn btn-block btn-color">login</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -95,19 +96,19 @@
             </div>
             
             
-             <div class="modal fade" id="modalCallOne" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+             <div class="modal fade" id="modalCallOne" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title text-center" id="myModalLabel">Login to your Food App</h4>
+                            <h4 class="modal-title text-center" id="myModalLabel">Register to your Food App</h4>
                         </div>
 
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
                                    <form id="register-form" method="POST" action="/signup" novalidate>
-									<div class="form-group">
+									<!--<div class="form-group">
 										<label class="radio-inline greyText">
 											<input type="radio" name="inlineRadio" id="inlineRadio1" value="" checked="true"> Host
 										</label>
@@ -115,7 +116,7 @@
 										<label class="radio-inline greyText">
 											<input type="radio" name="inlineRadio" id="inlineRadio2" value=""> Attende
 										</label>
-									</div>
+									</div>-->
 
 									<div class="form-group">
                                         <div class="input-group">
@@ -139,7 +140,7 @@
 										
 									</div>
 
-									<button type="submit" id="buttest" class="btn btn-success btn-lg btn-block">Create Account</button>
+									<button type="submit" id="buttest" class="btn  btn-lg btn-block btn-color">Create Account</button>
 								</form>
                                 </div>
                             </div>
