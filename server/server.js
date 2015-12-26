@@ -2,7 +2,10 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var path = require('path');
 
+
 var app = module.exports = loopback();
+var apiRoute = require('../client/public/controllers/apiRoute');
+
 
 app.set('views', path.join(__dirname, '../client/views'));
 app.engine('html', require('hogan-express'));
@@ -20,6 +23,8 @@ app.get('/', function(req, res){
   //res.send('hello world');
   res.render('index');
 });
+
+apiRoute(app);
 
 
 

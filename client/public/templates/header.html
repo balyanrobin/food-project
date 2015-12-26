@@ -1,40 +1,8 @@
 ﻿<header>
-    <div id="top" class="container">
+    <!--<div id="top" class="container">
       <div class="row">
         <div class="col-md-12 logo">
             <div class="content-logo"><img src="/assets/images/logo.jpg" alt="" /></div>
-        </div>
-        <div class="col-md-12 text-center">
-
-          <div class="btn-group">
-            <button class="btn btn-default" data-toggle="modal" data-target="#myModal">sign in
-            </button>
-            <button class="btn btn-default" data-toggle="modal" data-target="#myModal">logIN
-            </button>
-          </div>
-
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-
-                <div class="modal-body">
-                  <form class="form">
-
-                  </form>
-                </div>
-
-                <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
         </div>
         <nav class="col-md-12">
           <div class="mini-menu"><i class="fa fa-bars"></i></div>
@@ -47,14 +15,145 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </div>-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#" id="brandTitle"><img src="/assets/images/logo.jpg" alt="" style="width: 50px; height: 40px;"/></a>
+					</div>
+					
+					<div class="collapse navbar-collapse"  id="navbar-collapse-main">
+						<ul class="nav navbar-nav navbar-right">
+	                        <li class=""><a  href="#/">Home</a></li>
+                            <li class=""><a  href="#/work">Work</a></li>
+                            <li class=""><a  href="#/experiences">Experiences</a></li>
+                            <li class=""><a  href="#/blog">Blog</a></li>
+                            <li class=""><a  href="#/contact">Contact</a></li>
+                            <li class=""><a  href="" data-toggle="modal" data-target="#modalCallOne">
+                                <span class="glyphicon glyphicon-user"></span> Sign up
+                            </a></li>
+                            <li class=""><a  href="" data-toggle="modal" data-target="#modalCallTwo">
+                                <span class="glyphicon glyphicon-log-in"></span> Login
+                            </a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+            
+            <div class="modal fade" id="modalCallTwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title text-center" id="myModalLabel">Login to your Food App</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div>
+                                            <label>Login with social accounts</label>
+                                            <br/>
+                                            <button type="button" class="btn btn-primary btn-lg btn-block">Facebook</button>
+                                            <br/>
+                                            <button type="button" class="btn btn-danger btn-lg btn-block">Google</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form class="form" method="POST" action="/login">
+                                            <label>Login with your email</label>
+                                            
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                                    <input type="email" class="form-control" name="mail" id="mail" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                                                    <input type="password" name="pass" class="form-control" id="password" placeholder="password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" value="submit" class="btn btn-success btn-lg btn-block">login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+             <div class="modal fade" id="modalCallOne" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title text-center" id="myModalLabel">Login to your Food App</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                   <form id="register-form" method="POST" action="/signup" novalidate>
+									<div class="form-group">
+										<label class="radio-inline greyText">
+											<input type="radio" name="inlineRadio" id="inlineRadio1" value="" checked="true"> Host
+										</label>
+
+										<label class="radio-inline greyText">
+											<input type="radio" name="inlineRadio" id="inlineRadio2" value=""> Attende
+										</label>
+									</div>
+
+									<div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="User Name">
+                                        </div>
+									</div>
+
+									<div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                            <input type="email" class="form-control" name="mail" id="mail" placeholder="E-mail" >
+                                        </div>
+									</div>
+
+									<div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                                            <input type="password" class="form-control" name="inputpassword" id="inputpassword" placeholder="Password" >
+                                        </div>
+										
+									</div>
+
+									<button type="submit" id="buttest" class="btn btn-success btn-lg btn-block">Create Account</button>
+								</form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
   </header>
 
-  <script>
+  <!--<script>
       // Mobile menu toggle
       var mobile_nav = $(".mini-menu");
       mobile_nav.click(function () {
           $("#top").find(".menu").toggle(2000);
       });
-  </script>
+  </script>-->
 
